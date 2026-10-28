@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fff1f5, #fce4ec, #fff8f9);
+    color: #3d2933;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+#headerContainer {
+    background: linear-gradient(135deg, #d96c91, #ee9ab2);
+    color: #141010;
+    text-align: center;
+    padding: 35px 20px;
+    margin: 20px 30px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(190, 75, 117, 0.2);
+}
+
+#headerContainer > h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+#headerContainer > small {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #181214;
+}
+
+#formContainer {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(150, 75, 100, 0.1);
+    border: 1px solid #f8d8e2;
+}
+
+#formContainer > #studentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#formContainer .input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#formContainer .input-field label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #79445a;
+}
+
+#formContainer .input-field input {
+    width: 100%;
+    height: 48px;
+    padding: 0 15px;
+    border: 1.5px solid #f0c5d4;
+    border-radius: 12px;
+    background: #fffafd;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#formContainer .input-field input:focus {
+    border-color: #d96c91;
+    box-shadow: 0 0 0 4px rgba(217, 108, 145, 0.12);
+}
+
+#formContainer #studentForm button,
+#listContainer .list-item button {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #d96c91, #e88eaa);
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(190, 75, 117, 0.18);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#formContainer #studentForm button:hover,
+#listContainer .list-item button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(190, 75, 117, 0.25);
+}
+
+#formContainer #studentForm button:active,
+#listContainer .list-item button:active {
+    transform: scale(0.98);
+}
+
+#listContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+    margin: 30px;
+    align-items: stretch;
+}
+
+#listContainer > .list-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #f5d7e1;
+    border-top: 5px solid #e88eaa;
+    box-shadow: 0 6px 20px rgba(150, 75, 100, 0.08);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+#listContainer > .list-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(150, 75, 100, 0.15);
+}
+
+#listContainer .list-item h2 {
+    color: #793b54;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+#listContainer .list-item p {
+    color: #715965;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+#listContainer .list-item button {
+    margin-top: 18px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px 0;
+    }
+
+    #headerContainer {
+        margin: 15px;
+        padding: 28px 15px;
+    }
+
+    #formContainer {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    #listContainer {
+        grid-template-columns: 1fr;
+        margin: 15px;
+        gap: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
